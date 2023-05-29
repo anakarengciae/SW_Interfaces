@@ -68,3 +68,8 @@ Run the following command to start the subscriber node:
 - Utilization of grpc-Gateway to expose the wrapper's service as a REST API.
 
 - Acquisition of object coordinates from the new REST API using Flask, followed by storing the data in a JSON file.
+
+## Doxygen Documentation 
+file:///C:/Documentacion_Doxygen/Salida_Doc/html/index.html
+
+**Note:** The Doxygen documentation generation was unsuccessful during the testing. The issue might be related to the Docker environment and the folder path being unreachable. I apologize for any inconvenience caused.
