@@ -76,3 +76,6 @@ file:///C:/Documentacion_Doxygen/Salida_Doc/html/index.html
 
 ## Demo video
 https://drive.google.com/file/d/1Jetj8oCr3rCFXh-N9bLudcaOyhZVvI2r/view?usp=drive_link
+
+## Data flow diagram (DFD)
+[https://drive.google.com/file/d/1U73fCQr1RdlHv48iUrTPOIeJRUf-jAhp/view?usp=drive_link](https://drive.google.com/file/d/1U73fCQr1RdlHv48iUrTPOIeJRUf-jAhp/view?usp=sharing)
