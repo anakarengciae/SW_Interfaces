@@ -18,13 +18,25 @@ lib.multiplyCoordinates.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.POINTER
 lib.multiplyCoordinates.restype = None
 
 class DetectGreenObject:
+    """
+    Class for detecting green objects in images and publishing their coordinates.
+    """
+
     def __init__(self, image_folder):
+        """
+        Initialize the green object detection node.
+
+        :param image_folder: Path to the folder containing the images.
+        """
         rospy.init_node('green_object_detection')
         self.image_folder = image_folder
         self.bridge = CvBridge()
         self.publisher = rospy.Publisher('green_object_coordinates', PointStamped, queue_size=10)
 
     def process_images(self):
+        """
+        Process the images in the specified folder.
+        """
         image_files = os.listdir(self.image_folder)
 
         for file_name in image_files:
@@ -33,6 +45,11 @@ class DetectGreenObject:
                 self.detect_green_objects(file_path)
 
     def detect_green_objects(self, image_path):
+        """
+        Detect green objects in the given image and publish their coordinates.
+
+        :param image_path: Path to the image file.
+        """
         cv_image = cv2.imread(image_path)
 
         # Convert image to HSV color space
@@ -91,6 +108,9 @@ class DetectGreenObject:
         cv2.destroyAllWindows()
 
 def main():
+    """
+    Main function for executing the green object detection.
+    """
     if len(sys.argv) < 2:
         print("Please provide the path to the image folder.")
         return
